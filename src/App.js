@@ -36,6 +36,8 @@
 
 import React, { useState } from "react";
 
+// const App=()=>
+
 function App() {
   const [count, setCount] = useState(0);
 
@@ -46,7 +48,7 @@ function App() {
   return (
     <div>
       <h1>Counter App</h1>
-      <button class="btn btn-secondary" onClick={increment}>
+      <button class="btn btn-light" onClick={increment}>
         Clicked {count} times
       </button>
     </div>
