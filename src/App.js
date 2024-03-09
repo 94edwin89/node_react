@@ -1,23 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+// import React, { Component } from "react";
+
+// class App extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       count: 0
+//     };
+//   }
+
+//   increment = () => {
+//     this.setState({
+//       count: this.state.count + 1
+//     });
+//   }
+
+//   render() {
+//     return (
+//       <div>
+//         <h1>Counter App</h1>
+//         <button onClick={this.increment}>
+//           Clicked {this.state.count} times
+//         </button>
+//       </div>
+//     );
+//   }
+// }
+
+// export default App;
+
+
+//--------------------------------------------------------------------------
+
+//below is function components and above is class components
+//.........................................................................
+
+import React, { useState } from "react";
 
 function App() {
+  const [count, setCount] = useState(0);
+
+  const increment = () => {
+    setCount(count + 1);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Counter App</h1>
+      <button class="btn btn-secondary" onClick={increment}>
+        Clicked {count} times
+      </button>
     </div>
   );
 }
